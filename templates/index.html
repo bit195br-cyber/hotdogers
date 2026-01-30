@@ -1,16 +1,13 @@
 {% load static %}
-
-<link rel="stylesheet" href="{% static 'css/style.css' %}">
-
-<script src="{% static 'js/script.js' %}"></script>
-
 <!DOCTYPE html>
 <html lang="pt-br">
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>DevMaster | Criação de Sites Profissionais</title>
-    <link rel="stylesheet" href="style.css">
+    
+    <link rel="stylesheet" href="{% static 'css/style.css' %}">
+    
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
 </head>
 <body>
@@ -26,7 +23,6 @@
             </ul>
         </nav>
     </header>
-
 
     <section id="home" class="hero">
         <div class="hero-content">
@@ -124,13 +120,12 @@
         <p>&copy; 2026 HotDogers - Todos os direitos reservados.</p>
     </footer>
 
+    <a href="https://wa.me/5511965862280?text=Olá! Estava no seu site e gostaria de tirar uma dúvida." 
+       class="whatsapp-float" 
+       target="_blank">
+        <i class="fab fa-whatsapp"></i>
+    </a>
 
-<a href="https://wa.me/5511965862280?text=Olá! Estava no seu site e gostaria de tirar uma dúvida." 
-   class="whatsapp-float" 
-   target="_blank">
-    <i class="fab fa-whatsapp"></i>
-</a>
-
-    <script src="script.js"></script>
+    <script src="{% static 'js/script.js' %}"></script>
 </body>
 </html>
