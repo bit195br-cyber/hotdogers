@@ -5,13 +5,16 @@ from pathlib import Path
 BASE_DIR = Path(__file__).resolve().parent.parent
 
 # SEGURANÇA: Mantenha a chave secreta em segredo em produção!
-SECRET_KEY = 'django-insecure-substitua-por-uma-chave-aleatoria'
+SECRET_KEY = os.environ.get('SECRET_KEY', 'django-insecure-uma-chave-padrao-para-desenvolvimento-local')
 
-# SEGURANÇA: Mude para False quando subir para o PythonAnywhere
-DEBUG = True 
+# A variável DEBUG é True por padrão, a menos que a env var diga 'False'
+DEBUG = True
 
-# IMPORTANTE: Configurado para o seu domínio
-ALLOWED_HOSTS = ['gabrielferreira.pythonanywhere.com', 'localhost', '127.0.0.1']
+# Adicionamos o seu domínio do Railway diretamente na lista de hosts permitidos.
+ALLOWED_HOSTS = ['gabrielferreira.pythonanywhere.com', 'localhost', '127.0.0.1', 'web']
+
+# Adicionamos também na lista de origens confiáveis para que os formulários funcionem.
+CSRF_TRUSTED_ORIGINS = ['https://gabrielferreira.pythonanywhere.com/']
 
 INSTALLED_APPS = [
     'django.contrib.admin',
@@ -69,8 +72,10 @@ USE_TZ = True
 
 # Arquivos Estáticos
 STATIC_URL = '/static/'
-STATIC_ROOT = os.path.join(BASE_DIR, 'static')
+STATIC_ROOT = os.path.join(BASE_DIR, 'static_collected')
 # AJUSTADO: Caminho dos estáticos dentro da pasta hotdogs
-STATICFILES_DIRS = [os.path.join(BASE_DIR, 'hotdogs/static')] 
+STATICFILES_DIRS = [
+    os.path.join(BASE_DIR, 'static'),
+]
 
 DEFAULT_AUTO_FIELD = 'django.db.models.BigAutoField'
