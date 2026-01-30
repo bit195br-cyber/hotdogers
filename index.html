@@ -1,0 +1,136 @@
+{% load static %}
+
+<link rel="stylesheet" href="{% static 'css/style.css' %}">
+
+<script src="{% static 'js/script.js' %}"></script>
+
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>DevMaster | Criação de Sites Profissionais</title>
+    <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
+</head>
+<body>
+
+    <header>
+        <nav>
+            <div class="logo">Hot<span>Dogers</span></div>
+            <ul>
+                <li><a href="#home">Home</a></li>
+                <li><a href="#sobre">Sobre</a></li>
+                <li><a href="#planos">Planos</a></li>
+                <li><a href="https://wa.me/5511965862280?text=Olá! Gostaria de um orçamento para um site." target="_blank" class="btn-nav">WhatsApp</a></li>
+            </ul>
+        </nav>
+    </header>
+
+
+    <section id="home" class="hero">
+        <div class="hero-content">
+            <h1>Transformo suas ideias em <span>código de alta performance.</span></h1>
+            <p>Desenvolvimento de sites sob medida, do simples ao complexo.</p>
+            <a href="#planos" class="btn-principal">Ver Planos</a>
+        </div>
+    </section>
+
+    <section id="sobre" class="sobre">
+        <h2>Sobre Mim</h2>
+        <p>Sou especialista em transformar necessidades de negócios em experiências digitais incríveis. Utilizo as tecnologias mais modernas para garantir velocidade, segurança e SEO. Me chame via Whatsapp e faremos um site de acordo com seu gosto se necessario daremos suporte de até 3 anos</p>
+    </section>
+
+    <section id="planos" class="planos">
+        <h2>Nossos Planos</h2>
+        <div class="cards-container">
+            <div class="card">
+                <h3>Essencial</h3>
+                <div class="preco">R$ 800+</div>
+                <ul>
+                    <li><i class="fas fa-check"></i> Landing Page de página única</li>
+                    <li><i class="fas fa-check"></i> Design Responsivo (Mobile)</li>
+                    <li><i class="fas fa-check"></i> Integração com WhatsApp</li>
+                    <li><i class="fas fa-times"></i> Painel Administrativo</li>
+                </ul>
+                <a href="#" class="btn-plano">Escolher</a>
+            </div>
+
+            <div class="card destaque">
+                <div class="badge">Mais Popular</div>
+                <h3>Business</h3>
+                <div class="preco">R$ 1.500+</div>
+                <ul>
+                    <li><i class="fas fa-check"></i> Até 5 páginas personalizadas</li>
+                    <li><i class="fas fa-check"></i> Otimização SEO Google</li>
+                    <li><i class="fas fa-check"></i> Blog Integrado</li>
+                    <li><i class="fas fa-check"></i> Painel de Edição (CMS)</li>
+                </ul>
+                <a href="#" class="btn-plano">Escolher</a>
+            </div>
+
+            <div class="card">
+                <h3>Enterprise</h3>
+                <div class="preco">Sob Consulta</div>
+                <ul>
+                    <li><i class="fas fa-check"></i> E-commerce ou Sistemas</li>
+                    <li><i class="fas fa-check"></i> Banco de Dados Complexo</li>
+                    <li><i class="fas fa-check"></i> Integrações de API</li>
+                    <li><i class="fas fa-check"></i> Suporte Prioritário</li>
+                </ul>
+                <a href="#" class="btn-plano">Escolher</a>
+            </div>
+        </div>
+    </section>
+
+    <section id="contato" class="contato">
+        <h2>Solicitar Orçamento</h2>
+        <p>Preencha os dados abaixo e entrarei em contato para discutir seu projeto.</p>
+        
+        <div class="form-container">
+            <form action="https://formspree.io/f/gabrielferreira2840@gmail.com" method="POST">
+                <div class="input-group">
+                    <label for="nome">Nome Completo</label>
+                    <input type="text" name="name" id="nome" placeholder="Ex: João Silva" required>
+                </div>
+
+                <div class="input-group">
+                    <label for="email">Seu E-mail</label>
+                    <input type="email" name="_replyto" id="email" placeholder="email@exemplo.com" required>
+                </div>
+
+                <div class="input-group">
+                    <label for="plano">Plano de Interesse</label>
+                    <select name="plano" id="plano">
+                        <option value="essencial">Plano Essencial</option>
+                        <option value="business">Plano Business</option>
+                        <option value="enterprise">Plano Enterprise / Sob Medida</option>
+                    </select>
+                </div>
+
+                <div class="input-group">
+                    <label for="mensagem">Detalhes do Projeto</label>
+                    <textarea name="message" id="mensagem" rows="5" placeholder="Conte-me o que você precisa..." required></textarea>
+                </div>
+
+                <input type="text" name="_gotcha" style="display:none">
+
+                <button type="submit" class="btn-enviar">Enviar Pedido</button>
+            </form>
+        </div>
+    </section>
+
+    <footer>
+        <p>&copy; 2026 HotDogers - Todos os direitos reservados.</p>
+    </footer>
+
+
+<a href="https://wa.me/5511965862280?text=Olá! Estava no seu site e gostaria de tirar uma dúvida." 
+   class="whatsapp-float" 
+   target="_blank">
+    <i class="fab fa-whatsapp"></i>
+</a>
+
+    <script src="script.js"></script>
+</body>
+</html>

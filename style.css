@@ -1,0 +1,204 @@
+:root {
+    --primary: #2563eb;
+    --dark: #1e293b;
+    --light: #f8fafc;
+    --accent: #3b82f6;
+}
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+}
+
+body {
+    background-color: var(--light);
+    color: var(--dark);
+    line-height: 1.6;
+}
+
+/* Navegação */
+header {
+    background: #fff;
+    padding: 1rem 5%;
+    position: fixed;
+    width: 100%;
+    top: 0;
+    z-index: 1000;
+    box-shadow: 0 2px 10px rgba(0,0,0,0.1);
+}
+
+nav {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.logo {
+    font-size: 1.5rem;
+    font-weight: bold;
+    color: var(--dark);
+}
+
+.logo span { color: var(--primary); }
+
+nav ul { display: flex; list-style: none; }
+nav ul li { margin-left: 20px; }
+nav ul li a { text-decoration: none; color: var(--dark); font-weight: 500; transition: 0.3s; }
+nav ul li a:hover { color: var(--primary); }
+
+/* Hero Section */
+.hero {
+    height: 100vh;
+    background: linear-gradient(rgba(0,0,0,0.7), rgba(0,0,0,0.7)), url('https://images.unsplash.com/photo-1498050108023-c5249f4df085?auto=format&fit=crop&w=1350&q=80');
+    background-size: cover;
+    background-position: center;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    text-align: center;
+    color: white;
+    padding-top: 80px;
+}
+
+.hero h1 { font-size: 3rem; margin-bottom: 1rem; }
+.hero h1 span { color: var(--primary); }
+
+.btn-principal {
+    display: inline-block;
+    padding: 12px 30px;
+    background: var(--primary);
+    color: white;
+    text-decoration: none;
+    border-radius: 5px;
+    margin-top: 20px;
+    transition: 0.3s;
+}
+
+/* Planos */
+.planos { padding: 80px 5%; text-align: center; }
+.planos h2 { margin-bottom: 40px; font-size: 2.5rem; }
+
+.cards-container {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+    gap: 20px;
+}
+
+.card {
+    background: white;
+    padding: 40px 20px;
+    border-radius: 10px;
+    box-shadow: 0 5px 15px rgba(0,0,0,0.05);
+    transition: transform 0.3s;
+    position: relative;
+}
+
+.card:hover { transform: translateY(-10px); }
+
+.card.destaque {
+    border: 2px solid var(--primary);
+    transform: scale(1.05);
+}
+
+.card.destaque:hover { transform: scale(1.05) translateY(-10px); }
+
+.preco { font-size: 2rem; font-weight: bold; margin: 20px 0; color: var(--primary); }
+
+.card ul { list-style: none; text-align: left; margin-bottom: 30px; }
+.card ul li { margin-bottom: 10px; }
+.card ul li i { color: #10b981; margin-right: 10px; }
+
+.btn-plano {
+    display: block;
+    padding: 10px;
+    background: var(--dark);
+    color: white;
+    text-decoration: none;
+    border-radius: 5px;
+}
+
+.badge {
+    position: absolute;
+    top: -15px;
+    left: 50%;
+    transform: translateX(-50%);
+    background: var(--primary);
+    color: white;
+    padding: 5px 15px;
+    border-radius: 20px;
+    font-size: 0.8rem;
+}
+
+
+/* Seção de Contato */
+.contato {
+    padding: 80px 5%;
+    background-color: #fff;
+    text-align: center;
+}
+
+.contato h2 { font-size: 2.5rem; margin-bottom: 10px; }
+
+.form-container {
+    max-width: 600px;
+    margin: 40px auto 0;
+    text-align: left;
+    background: var(--light);
+    padding: 30px;
+    border-radius: 10px;
+    box-shadow: 0 4px 6px rgba(0,0,0,0.05);
+}
+
+.input-group {
+    margin-bottom: 20px;
+}
+
+.input-group label {
+    display: block;
+    margin-bottom: 8px;
+    font-weight: 600;
+    color: var(--dark);
+}
+
+.input-group input, 
+.input-group select, 
+.input-group textarea {
+    width: 100%;
+    padding: 12px;
+    border: 1px solid #cbd5e1;
+    border-radius: 5px;
+    font-size: 1rem;
+    outline: none;
+    transition: 0.3s;
+}
+
+.input-group input:focus, 
+.input-group textarea:focus {
+    border-color: var(--primary);
+    box-shadow: 0 0 0 3px rgba(37, 99, 235, 0.1);
+}
+
+.btn-enviar {
+    width: 100%;
+    padding: 15px;
+    background-color: var(--primary);
+    color: white;
+    border: none;
+    border-radius: 5px;
+    font-size: 1.1rem;
+    font-weight: bold;
+    cursor: pointer;
+    transition: 0.3s;
+}
+
+.btn-enviar:hover {
+    background-color: #1d4ed8;
+}
+
+/* Ajuste Responsivo */
+@media (max-width: 768px) {
+    .hero h1 { font-size: 2rem; }
+    .form-container { width: 95%; }
+}
